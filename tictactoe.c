@@ -3,9 +3,8 @@
 #include <stdbool.h>
 
 char tab[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-bool juegoFin = false;
+bool juegoFin = false, sesionActiva = true;
 int numTurno, ganador;
-bool sesionActiva = true;
 
 void imprimirTablero(){
     printf("\e[1;1H\e[2J");
@@ -50,7 +49,7 @@ void turno(int numJugador){
                     tab[0][0] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 2:
                 if (tab[0][1] == 'X' || tab[0][1] == 'O'){
                     casillaOcupada();
@@ -60,7 +59,7 @@ void turno(int numJugador){
                     tab[0][1] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 3:
                 if (tab[0][2] == 'X' || tab[0][2] == 'O'){
                     casillaOcupada();
@@ -70,7 +69,7 @@ void turno(int numJugador){
                     tab[0][2] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 4:
                 if (tab[1][0] == 'X' || tab[1][0] == 'O'){
                     casillaOcupada();
@@ -80,7 +79,7 @@ void turno(int numJugador){
                     tab[1][0] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 5:
                 if (tab[1][1] == 'X' || tab[1][1] == 'O'){
                     casillaOcupada();
@@ -90,7 +89,7 @@ void turno(int numJugador){
                     tab[1][1] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 6:
                 if (tab[1][2] == 'X' || tab[1][2] == 'O'){
                     casillaOcupada();
@@ -100,7 +99,7 @@ void turno(int numJugador){
                     tab[1][2] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 7:
                 if (tab[2][0] == 'X' || tab[2][0] == 'O'){
                     casillaOcupada();
@@ -110,7 +109,7 @@ void turno(int numJugador){
                     tab[2][0] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 8:
                 if (tab[2][1] == 'X' || tab[2][1] == 'O'){
                     casillaOcupada();
@@ -120,7 +119,7 @@ void turno(int numJugador){
                     tab[2][1] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             case 9:
                 if (tab[2][2] == 'X' || tab[2][2] == 'O'){
                     casillaOcupada();
@@ -130,13 +129,13 @@ void turno(int numJugador){
                     tab[2][2] = valorCasilla;
                     numTurno++;
                 }
-            break;
+                break;
             default:
                 printf("Numero de casilla incorrecto. Elija otra casilla\n");
                 system("pause");
                 imprimirTablero();
                 eleccion = 0;
-            break;
+                break;
         }
     } while (eleccion < 1 || eleccion > 9);
 }
