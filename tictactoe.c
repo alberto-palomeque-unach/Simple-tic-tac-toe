@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#ifdef WIN32
+#define clrscr() system("cls");
+#else
+#define clrscr() system("clear");
+#endif
 
 char tab[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 bool juegoFin = false, sesionActiva = true;
 int numTurno, ganador;
 
 void imprimirTablero(){
+    clrscr();
     printf("\e[1;1H\e[2J");
     printf("_____________\n");
     printf("| %c | %c | %c |\n", tab[0][0], tab[0][1], tab[0][2]);
