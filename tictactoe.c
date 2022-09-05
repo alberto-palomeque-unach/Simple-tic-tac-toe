@@ -18,6 +18,12 @@ void imprimirTablero(){
     printf("-------------\n");
 }
 
+void casillaOcupada(){
+    printf("Casilla ocupada. Elija otra casilla\n");
+    system("pause");
+    imprimirTablero();
+}
+
 void turno(int numJugador){
     char valorCasilla;
     int eleccion;
@@ -37,9 +43,7 @@ void turno(int numJugador){
         switch (eleccion){
             case 1:
                 if (tab[0][0] == 'X' || tab[0][0] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -49,9 +53,7 @@ void turno(int numJugador){
             break;
             case 2:
                 if (tab[0][1] == 'X' || tab[0][1] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -61,9 +63,7 @@ void turno(int numJugador){
             break;
             case 3:
                 if (tab[0][2] == 'X' || tab[0][2] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -73,9 +73,7 @@ void turno(int numJugador){
             break;
             case 4:
                 if (tab[1][0] == 'X' || tab[1][0] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -85,9 +83,7 @@ void turno(int numJugador){
             break;
             case 5:
                 if (tab[1][1] == 'X' || tab[1][1] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -97,9 +93,7 @@ void turno(int numJugador){
             break;
             case 6:
                 if (tab[1][2] == 'X' || tab[1][2] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -109,9 +103,7 @@ void turno(int numJugador){
             break;
             case 7:
                 if (tab[2][0] == 'X' || tab[2][0] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -121,9 +113,7 @@ void turno(int numJugador){
             break;
             case 8:
                 if (tab[2][1] == 'X' || tab[2][1] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
@@ -133,9 +123,7 @@ void turno(int numJugador){
             break;
             case 9:
                 if (tab[2][2] == 'X' || tab[2][2] == 'O'){
-                    printf("Casilla ocupada. Elija otra casilla\n");
-                    system("pause");
-                    imprimirTablero();
+                    casillaOcupada();
                     eleccion = 0;
                 }
                 else{
